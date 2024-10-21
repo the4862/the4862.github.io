@@ -13,17 +13,28 @@
 				  -1px -1px 0 #000;
 }
 
+#outline2{
+	color: red;
+	text-shadow: -3px 3px 6px #000,
+				  4px 4px 8px #000,
+				  1px -1px 0 #000,
+				  -1px -1px 0 #000;
+}
+
 body {
-  background-image: url('../background.png');
+  background-image: url('../background.jpg');
   background-repeat: repeat;
-  background-size: contain;
+  background-size: fill;
   margin: 0;
-  font-family: Tahoma, Tahoma, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .topnav {
   overflow: hidden;
   background-color: #80808088;
+  display: flex;              /* Enables flexbox layout */
+  justify-content: center;     /* Centers the links horizontally */
+  align-items: center;         /* Centers the links vertically */
 }
 
 .topnav a {
@@ -32,23 +43,71 @@ body {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 25px;
 }
 
 .topnav a:hover {
-  background-color: #54545488;
+  background-color: #88545454;
   color: black;
 }
 
 .topnav a.active {
-  color: #0096FF;
+  color: #ff9600;
   text-shadow: -1px 1px 2px #000,
 			 4px 4px 8px #111,
 			 1px -1px 0 #000,
 			-1px -1px 0 #000;
 }
-</style>
 
+        .box {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 750px;
+            padding: 20px;
+            background-color: #00000088;
+            border-radius: 0px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .content {
+            display: flex; align-items: center
+        }
+
+        .content img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            margin-right: 20px;
+            border-radius: 0px;
+        }
+
+        .text {
+            flex: 1;
+            font-size: 25px;
+  	    color: white;
+        }
+
+        .button {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+        }
+
+        .button button {
+            padding: 20px 40px;
+            background-color: #007B55;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .button button:hover {
+            background-color: #0056b3;
+        }
+</style>
 <div class="topnav">
   <a href="../index.html"><font face = "Arial"><b>[Home]</b></font></a>
   <a href="../play.html"><font face = "Arial"><b>[Games]</b></font></a>
